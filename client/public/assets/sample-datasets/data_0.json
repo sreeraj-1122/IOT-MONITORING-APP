@@ -1,0 +1,98 @@
+[
+  {
+    "hour": 0,
+    "data": 10
+  },
+  {
+    "hour": 1,
+    "data": 30
+  },
+  {
+    "hour": 2,
+    "data": 50
+  },
+  {
+    "hour": 3,
+    "data": 10
+  },
+  {
+    "hour": 4,
+    "data": 30
+  },
+  {
+    "hour": 5,
+    "data": 50
+  },
+  {
+    "hour": 6,
+    "data": 10
+  },
+  {
+    "hour": 7,
+    "data": 30
+  },
+  {
+    "hour": 8,
+    "data": 50
+  },
+  {
+    "hour": 9,
+    "data": 10
+  },
+  {
+    "hour": 10,
+    "data": 30
+  },
+  {
+    "hour": 11,
+    "data": 50
+  },
+  {
+    "hour": 12,
+    "data": 10
+  },
+  {
+    "hour": 13,
+    "data": 30
+  },
+  {
+    "hour": 14,
+    "data": 50
+  },
+  {
+    "hour": 15,
+    "data": 10
+  },
+  {
+    "hour": 16,
+    "data": 30
+  },
+  {
+    "hour": 17,
+    "data": 50
+  },
+  {
+    "hour": 18,
+    "data": 10
+  },
+  {
+    "hour": 19,
+    "data": 30
+  },
+  {
+    "hour": 20,
+    "data": 50
+  },
+  {
+    "hour": 21,
+    "data": 10
+  },
+  {
+    "hour": 22,
+    "data": 30
+  },
+  {
+    "hour": 23,
+    "data": 50
+  }
+]

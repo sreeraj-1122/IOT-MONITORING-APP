@@ -1,0 +1,12 @@
+[
+  {
+    "event": "connected",
+    "duration": 28800,
+    "timestamp": "2024-06-12T10:26:41.818Z"
+  },
+  {
+    "event": "disconnected",
+    "duration": 28800,
+    "timestamp": "2024-06-12T10:26:41.818Z"
+  }
+]
