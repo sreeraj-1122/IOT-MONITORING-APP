@@ -14,8 +14,8 @@ const DashboardLayout = () => {
     <div>
       <UserHeader />
       <ToolBar isOpen={isOpen} setIsopen={setIsopen} />
-      <main className="min-h-screen  relative">
-        <div className="absolute">{isOpen && <SideBar isOpen={isOpen} closeSidebar={closeSidebar}/>}</div>
+      <main className="min-h-screen  relative ">
+        <div className="absolute ">{isOpen && <SideBar isOpen={isOpen} closeSidebar={closeSidebar}/>}</div>
         <div className="transition-all duration-300">
           <Outlet />
         </div>

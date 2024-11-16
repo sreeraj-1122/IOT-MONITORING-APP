@@ -17,7 +17,7 @@
       "battery": {
         "timestamp": "2024-06-12T10:26:41.818Z",
         "percentage": "50%",
-        "temperature": "30C"
+        "temperature": "30°C"
       },
       "sim": {
         "signalStrength": "33%",
@@ -45,7 +45,7 @@
       "battery": {
         "timestamp": "2024-06-12T10:26:41.818Z",
         "percentage": "50%",
-        "temperature": "30C"
+        "temperature": "30°C"
       },
       "sim": {
         "signalStrength": "33%",

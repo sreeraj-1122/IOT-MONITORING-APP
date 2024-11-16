@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from "react";
 const BreadcrumbContext = createContext();
 
 export const BreadcrumbProvider = ({ children }) => {
-  const [breadcrumb, setBreadcrumb] = useState(['Dashboard']);
+  const [breadcrumb, setBreadcrumb] = useState(['']);
 
   const updateBreadcrumb = (page) => {
     if (page === 'Dashboard') {
@@ -15,6 +15,7 @@ export const BreadcrumbProvider = ({ children }) => {
 
   const addSubBreadcrumb = (subPage) => {
     setBreadcrumb((prev) => [...prev, subPage]);
+    
   };
 
   const resetBreadcrumb = () => {

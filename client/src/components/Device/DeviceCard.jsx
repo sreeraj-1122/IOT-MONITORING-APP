@@ -5,13 +5,19 @@ import { FaSignal } from "react-icons/fa";
 import { FaUsb } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 
-const DeviceCard = () => {
+const DeviceCard = ({
+  deviceName,
+  sim,
+  location,
+}) => {
+  const { signalStrength, operator, networkBand } = sim;
+  const { city, district, state, country, pinCode } = location;
   return (
     <div className="border border-customDark w-[396px] h-[100px] rounded-lg px-2 py-1 mt-5  ">
       <div className="flex justify-between items-center mb-1 text-[#1E1E1E]">
-        <span className="text-sm font-medium ">Device 1</span>
+        <span className="text-sm font-medium ">{deviceName}</span>
         <div className="flex items-center gap-2">
-          <span >
+          <span>
             <FaUsb />
           </span>
           <span>
@@ -27,13 +33,20 @@ const DeviceCard = () => {
         <span>Offline</span>
       </div>
       <div className="flex items-center gap-2 text-sm text-[#666666]">
-        <span><IoLocationSharp />
+        <span>
+          <IoLocationSharp />
         </span>
-        <span>Location</span>
+        <span>
+          {city}, {district}, {state}, {country}, {pinCode}
+        </span>
       </div>
       <div className="flex items-center gap-2 text-sm">
-        <span className="text-[#1E1E1E]"><FaSimCard/></span>
-        <span className="text-[#666666]">Cell info</span>
+        <span className="text-[#1E1E1E]">
+          <FaSimCard />
+        </span>
+        <span className="text-[#666666]">
+          {operator} ({signalStrength} - {networkBand})
+        </span>
       </div>
     </div>
   );

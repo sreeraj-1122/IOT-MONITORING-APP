@@ -3,17 +3,17 @@ import { IoMenuSharp } from "react-icons/io5";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { useBreadcrumb } from '../../contexts/BreadcrumbContext';
 
-const ToolBar = ({isOpen,setIsopen}) => {
-  const { breadcrumb, updateBreadcrumb } = useBreadcrumb(); 
+const ToolBar = ({ isOpen, setIsopen }) => {
+  const { breadcrumb } = useBreadcrumb(); 
 
   return (
     <div className="w-full h-[48px] border-b-[1px] border-customDark shadow flex items-center ps-8">
-      <span className="text-xl mr-4 cursor-pointer" onClick={()=>setIsopen(!isOpen)}>
+      <span className="text-xl mr-4 cursor-pointer" onClick={() => setIsopen(!isOpen)}>
         <IoMenuSharp />
       </span>
 
       <div className="flex items-center text-gray-900">
-      {breadcrumb.map((item, index) => (
+        {breadcrumb.map((item, index) => (
           <React.Fragment key={index}>
             <span className="text-sm font-medium">{item}</span>
             {index < breadcrumb.length - 1 && (
@@ -23,7 +23,6 @@ const ToolBar = ({isOpen,setIsopen}) => {
             )}
           </React.Fragment>
         ))}
-       
       </div>
     </div>
   );

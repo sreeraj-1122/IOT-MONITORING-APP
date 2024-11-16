@@ -3,7 +3,7 @@ import React from "react";
 const ProgressBar = ({ label, value, color }) => {
   console.log(color);
   return (
-    <div className="border border-customDark rounded-lg px-4 py-4   ">
+    <div className="border border-customDark rounded-lg px-4 py-4 w-full  ">
         <div className="flex items-center gap-2 ">
             <span className={`w-4 h-4 bg-${color}-500`}></span>
             <span className="font-medium text-[#1E1E1E] text-sm">{label}</span>

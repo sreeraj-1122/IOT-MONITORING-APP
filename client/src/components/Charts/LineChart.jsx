@@ -28,12 +28,10 @@ const LineChart = () => {
   const [chartData, setChartData] = useState(null);
 
   useEffect(() => {
-    // Extract data from imported JSON
     const hours = data0.map((item) => item.hour);
     const data0Values = data0.map((item) => item.data);
     const data1Values = data1.map((item) => item.data);
 
-    // Set the chart data
     setChartData({
       labels: hours,
       datasets: [
@@ -97,15 +95,17 @@ const LineChart = () => {
   };
 
   return (
-    <div className="h-[400px] border border-customDark md:m-10 md:p-4 m-3 p-2">
-      <p className="text-sm font-medium text-[#1E1E1E]">Daily Trend</p>
-      <div className="flex items-center h-full p-4">
+    <div className="h-[400px] md:px-10 p-2">
+     <div className="border border-customDark p-3 rounded-lg">
+     <p className="text-sm font-medium text-[#1E1E1E]">Daily Trend</p>
+      <div className="flex items-center h-full p-2 ">
         {chartData ? (
           <Line data={chartData} options={options} height={400} />
         ) : (
           <div className="m-auto font-bold mt-5 text-2xl">Loading...</div>
         )}
       </div>
+     </div>
     </div>
   );
 };
