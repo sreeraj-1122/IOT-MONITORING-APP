@@ -11,7 +11,7 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="container mx-auto flex flex-col items-center justify-center text-center bg-black bg-opacity-50 p-8 rounded ">
+      <div className="container mx-auto flex flex-col items-center justify-center text-center bg-black bg-opacity-50 p-8 rounded  ">
         <h1 className="text-4xl font-bold text-white mb-4">
           Unlock the Power of IoT with IoTMonitor
         </h1>

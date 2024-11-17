@@ -17,14 +17,9 @@ export const BreadcrumbProvider = ({ children }) => {
     setBreadcrumb((prev) => [...prev, subPage]);
     
   };
-
-  const resetBreadcrumb = () => {
-    setBreadcrumb(['Dashboard']); 
-  };
-
   return (
     <BreadcrumbContext.Provider
-      value={{ breadcrumb, updateBreadcrumb, addSubBreadcrumb, resetBreadcrumb }}
+      value={{ breadcrumb, updateBreadcrumb, addSubBreadcrumb, }}
     >
       {children}
     </BreadcrumbContext.Provider>

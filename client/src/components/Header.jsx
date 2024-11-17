@@ -11,7 +11,6 @@ const Header = () => {
           Panel0
         </Link>
         <nav>
-          
               <Link
                 to="/login"
                 className="px-4 py-2 hover:bg-blue-600 rounded border border-customDark bg-blue-500 mr-2"

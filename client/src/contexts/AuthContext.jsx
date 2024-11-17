@@ -1,4 +1,3 @@
-// AuthContext.jsx
 import { createContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,12 +14,11 @@ export const AuthProvider = ({ children }) => {
       setToken(savedToken);
       setIsLoggedIn(true);
     }
-
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
-  }, []);
+  }, [isLoggedIn]);
 
   const login = (newToken) => {
     setToken(newToken);

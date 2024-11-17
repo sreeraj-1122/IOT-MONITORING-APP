@@ -11,7 +11,6 @@ const ToolBar = ({ isOpen, setIsopen }) => {
       <span className="text-xl mr-4 cursor-pointer" onClick={() => setIsopen(!isOpen)}>
         <IoMenuSharp />
       </span>
-
       <div className="flex items-center text-gray-900">
         {breadcrumb.map((item, index) => (
           <React.Fragment key={index}>

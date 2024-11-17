@@ -9,7 +9,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     updateBreadcrumb("Profile");
-  }, [updateBreadcrumb]);
+  }, []);
   return (
     <div className="flex justify-center w-full h-screen">
       <div className="flex flex-col items-center mt-6 gap-2">
@@ -25,7 +25,7 @@ const UserProfile = () => {
             value={user?.name || ""}
             readOnly
             id="username"
-            className="p-1 border border-customDark rounded-md px-2 "
+            className="p-2 border border-customDark rounded-md px-2 "
           />
         </div>
         <div className="flex flex-col gap-1 w-[320px] text-sm">
@@ -37,7 +37,7 @@ const UserProfile = () => {
             value={user?.email || ""}
             readOnly
             id="email"
-            className="p-1 border border-customDark rounded-md px-2"
+            className="p-2 border border-customDark rounded-md px-2"
           />
         </div>
         <button

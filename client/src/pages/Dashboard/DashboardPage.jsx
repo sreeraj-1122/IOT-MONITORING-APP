@@ -9,12 +9,14 @@ const DashboardPage = () => {
   const { updateBreadcrumb } = useBreadcrumb(); 
   useEffect(() => {
     updateBreadcrumb("Dashboard");
-  }, [updateBreadcrumb]);
+  }, []);
+
+  
   return (
     <div className="w-full pt-10">
       <LineChart />
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:m-10 pt-20 m-2  ">
-        <BarChart />
+       <BarChart value="flex-col"/>
         <DoughnutChart/>
         <DeviceList />
       </div>

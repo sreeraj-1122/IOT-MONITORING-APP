@@ -13,7 +13,7 @@ const DeviceCard = ({
   const { signalStrength, operator, networkBand } = sim;
   const { city, district, state, country, pinCode } = location;
   return (
-    <div className="border border-customDark w-[396px] h-[100px] rounded-lg px-2 py-1 mt-5  ">
+    <div className="border border-customDark md:w-[396px] w-full h-[100px] rounded-lg px-2 py-1 mt-5  ">
       <div className="flex justify-between items-center mb-1 text-[#1E1E1E]">
         <span className="text-sm font-medium ">{deviceName}</span>
         <div className="flex items-center gap-2">

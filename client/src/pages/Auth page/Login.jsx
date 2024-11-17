@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
 import { toast } from "react-toastify";
 
@@ -14,7 +14,7 @@ const Login = () => {
 
     if (!email.trim() || !password.trim()) {
       toast.error("Please enter both email and password");
-    }    
+    }
     const storedUser = JSON.parse(localStorage.getItem("user"));
 
     if (storedUser) {
@@ -22,7 +22,7 @@ const Login = () => {
         const token = "fake-jwt-token";
         login(token);
         toast.success("Logged successful!");
-        navigate('/dashboard', { replace: true });
+        navigate("/dashboard", { replace: true });
       } else {
         toast.error("Invalid email or password");
       }
@@ -46,7 +46,8 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder='Enter your email'
+              className="w-full p-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -59,7 +60,8 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder='Enter your password'
+              className="w-full p-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <button
@@ -69,6 +71,16 @@ const Login = () => {
             Login
           </button>
         </form>
+
+        <p className="text-sm text-center text-gray-600">
+          Don't have an account?{" "}
+          <Link
+            to="/register"
+            className="text-blue-600 hover:underline"
+          >
+            Register
+          </Link>
+        </p>
       </div>
     </div>
   );

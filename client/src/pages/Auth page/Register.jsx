@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const Register = () => {
@@ -26,10 +26,9 @@ const Register = () => {
     localStorage.setItem('token', token); 
     localStorage.setItem('user', JSON.stringify(userData)); 
 
-    toast.success('Registration successful!')
-    navigate('/dashboard', { replace: true });
+    navigate('/login', { replace: true });
+    toast.success('Registration successful!');
   };
-
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -44,7 +43,8 @@ const Register = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder='Enter your name'
+              className="w-full p-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -55,7 +55,8 @@ const Register = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder='Enter your email'
+              className="w-full p-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           
@@ -66,10 +67,10 @@ const Register = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder='Enter your password'
+              className="w-full p-2 mt-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-
 
           <button
             type="submit"
@@ -78,6 +79,16 @@ const Register = () => {
             Register
           </button>
         </form>
+
+        <p className="text-sm text-center text-gray-600">
+          Already have an account?{" "}
+          <Link
+            to="/login"
+            className="text-blue-600 hover:underline"
+          >
+            Login
+          </Link>
+        </p>
       </div>
     </div>
   );

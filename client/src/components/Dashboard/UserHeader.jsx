@@ -23,7 +23,6 @@ const UserHeader = () => {
             <span className=" bg-customDark w-9 h-9 flex items-center justify-center rounded-full cursor-pointer" onClick={() => handleNavigation('/dashboard/profile')}>
               <FaUser className="text-gray-800 text-lg" />
             </span>
-
             <a
               href="https://www.estrotech.in/"
               target="_blank"

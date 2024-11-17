@@ -1,6 +1,6 @@
 import React from "react";
 import SubLists from './SubLists';
-import deviceData from "../../../public/assets/sample-datasets/deviceData.json";
+import deviceData from "../../assets/sample-datasets/deviceData.json";
 
 const DeviceList = () => {
   const offlineDevices = deviceData
@@ -15,7 +15,7 @@ const DeviceList = () => {
       <h5 className="text-[#171717] text-sm font-medium mb-4">Offline Devices</h5>
           {offlineDevices.map((device, index) => (
             <>
-              <SubLists key={index} device={device.deviceName} location={device.location.city} disconnected={device.connectionStatus.disconnected}/>
+              <SubLists key={device.deviceName} device={device.deviceName} location={device.location.city} disconnected={device.connectionStatus.disconnected}/>
             </>
             
           ))}
