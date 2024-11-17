@@ -23,7 +23,7 @@ Follow these instructions to set up and run the project on your local machine.
 - Node.js (v14 or above)
 - npm (v6 or above)
 
-### Installation
+## Installation
 
 ### Step 1: Clone the repository
 
