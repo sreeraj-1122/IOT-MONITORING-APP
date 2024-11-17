@@ -18,7 +18,7 @@ Follow these instructions to set up and run the project on your local machine.
 
 ### Prerequisites
 
-#### Ensure you have the following installed:
+ Ensure you have the following installed:
 
 - Node.js (v14 or above)
 - npm (v6 or above)
@@ -54,7 +54,7 @@ npm run dev
 ```
 ### Step 2: Open the application in your browser
 
-#### Visit [http://localhost:3000](http://localhost:3000) to view the application.
+ Visit [http://localhost:3000](http://localhost:3000) to view the application.
 
 
 
